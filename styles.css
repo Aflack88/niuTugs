@@ -237,7 +237,7 @@ header .container {
     background: var(--white);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 
 .results-table thead {
@@ -248,9 +248,14 @@ header .container {
 .results-table th {
     padding: 1rem 1.25rem;
     text-align: left;
-    font-size: 1rem;
+    font-size: 0.9rem;
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+
+.medal {
+    margin-right: 0.4rem;
+    font-style: normal;
 }
 
 .results-table td {
@@ -259,12 +264,13 @@ header .container {
     font-size: 0.95rem;
 }
 
-.results-table tbody tr:nth-child(even) {
+.results-table tbody tr:not(.decade-header):nth-child(even) {
     background: #fafafa;
 }
 
-.results-table tbody tr:hover {
+.results-table tbody tr:not(.decade-header):not(.no-tournament):hover {
     background: #f0e8ea;
+    cursor: default;
 }
 
 .results-table tbody tr:last-child td {
@@ -277,9 +283,36 @@ header .container {
     width: 80px;
 }
 
+/* Decade group headers */
+.results-table tr.decade-header td {
+    background: var(--niu-black);
+    color: rgba(255,255,255,0.6);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.4rem 1.25rem;
+    border-bottom: none;
+}
+
+/* Most recent champion row */
+.results-table tr.recent-champion td {
+    background: #fffbea;
+    font-weight: 600;
+}
+
+.results-table tr.recent-champion td:first-child {
+    color: #b8860b;
+}
+
+.results-table tr.recent-champion td:nth-child(2) {
+    color: #5a3e00;
+}
+
 .results-table tr.no-tournament td {
     color: var(--medium-gray);
     font-style: italic;
+    text-align: left;
 }
 
 /* Contact Section */
