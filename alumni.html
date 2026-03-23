@@ -27,7 +27,7 @@
     <!-- Hero -->
     <section class="alumni-hero">
         <div class="hero-content">
-            <h2>NIU Tugs Alumni</h2>
+            <h2>Alumni Pride</h2>
             <p class="tagline">Once a tugger, always a tugger.</p>
         </div>
     </section>
@@ -150,45 +150,11 @@
         <div class="container">
             <h2>Submit Your Photos</h2>
             <p class="form-intro">Help us preserve the history of NIU Tugs. Share photos from your years competing and we'll add them to the gallery.</p>
-            <form class="alumni-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" enctype="multipart/form-data">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="photo-name">Your Name</label>
-                        <input type="text" id="photo-name" name="name" placeholder="Full name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="photo-fraternity">Fraternity</label>
-                        <input type="text" id="photo-fraternity" name="fraternity" placeholder="e.g. Sigma Nu" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="photo-years">Years Competed</label>
-                        <input type="text" id="photo-years" name="years" placeholder="e.g. 2005–2008">
-                    </div>
-                    <div class="form-group">
-                        <label for="photo-email">Email</label>
-                        <input type="email" id="photo-email" name="email" placeholder="your@email.com" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="photo-caption">Photo Caption / Description</label>
-                    <textarea id="photo-caption" name="caption" rows="3" placeholder="Describe what's in the photo, the year, the event, etc."></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="photo-file">Attach Photos</label>
-                    <div class="file-upload-area" id="file-upload-area">
-                        <input type="file" id="photo-file" name="photos" multiple accept="image/*">
-                        <label for="photo-file" class="file-upload-label">
-                            <span class="upload-icon">&#128190;</span>
-                            <span>Click to select photos or drag and drop</span>
-                            <span class="file-hint">JPG, PNG, HEIC — up to 10 files</span>
-                        </label>
-                    </div>
-                    <p id="file-names" class="file-names"></p>
-                </div>
-                <button type="submit" class="submit-btn">Send Photos</button>
-            </form>
+            <div class="photo-submit-cta">
+                <div class="photo-submit-icon">&#128247;</div>
+                <p>Use our Google Form to upload photos directly — files go straight to our Drive so nothing gets lost.</p>
+                <a href="https://forms.gle/DpZYo2HYBouoTobK9" target="_blank" rel="noopener" class="submit-btn-link">Open Photo Submission Form</a>
+            </div>
         </div>
     </section>
 
@@ -217,34 +183,10 @@
                 </div>
             </div>
 
-            <form class="alumni-form reconnect-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="google-form-wrapper">
                 <h3 class="form-subheading">Stay Connected</h3>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="rc-name">Full Name</label>
-                        <input type="text" id="rc-name" name="name" placeholder="Your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="rc-email">Email Address</label>
-                        <input type="email" id="rc-email" name="email" placeholder="your@email.com" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="rc-fraternity">Fraternity</label>
-                        <input type="text" id="rc-fraternity" name="fraternity" placeholder="e.g. Sigma Nu">
-                    </div>
-                    <div class="form-group">
-                        <label for="rc-years">Years at NIU</label>
-                        <input type="text" id="rc-years" name="years" placeholder="e.g. 2003–2007">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="rc-message">Message (optional)</label>
-                    <textarea id="rc-message" name="message" rows="4" placeholder="Share a memory, say hello, or let us know what you've been up to..."></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Submit</button>
-            </form>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdqpDG56XwN6Vna51zc7_dHWHLpihsbwG8gESWcAMG7AdXNog/viewform?embedded=true" width="100%" height="1092" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
         </div>
     </section>
 
