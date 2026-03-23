@@ -229,48 +229,57 @@ header .container {
 }
 
 /* Results Section */
-.results-year {
-    margin-bottom: 3rem;
-}
-
-.results-year h3 {
-    text-align: center;
-    color: var(--niu-black);
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
-}
-
-.results-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 800px;
+.results-table {
+    width: 100%;
+    max-width: 700px;
     margin: 0 auto;
-}
-
-.result-card {
+    border-collapse: collapse;
     background: var(--white);
-    padding: 2rem;
     border-radius: 8px;
+    overflow: hidden;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    text-align: center;
 }
 
-.result-card h4 {
-    color: var(--niu-red);
-    margin-bottom: 1.5rem;
-    font-size: 1.3rem;
+.results-table thead {
+    background: var(--niu-red);
+    color: var(--white);
 }
 
-.champion {
-    font-size: 1.5rem;
+.results-table th {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.results-table td {
+    padding: 0.65rem 1.25rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+}
+
+.results-table tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.results-table tbody tr:hover {
+    background: #f0e8ea;
+}
+
+.results-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.results-table td:first-child {
     font-weight: bold;
-    color: var(--niu-black);
-    margin-bottom: 0.5rem;
+    color: var(--niu-red);
+    width: 80px;
 }
 
-.runner-up {
+.results-table tr.no-tournament td {
     color: var(--medium-gray);
+    font-style: italic;
 }
 
 /* Contact Section */
