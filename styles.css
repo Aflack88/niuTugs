@@ -225,7 +225,7 @@ header .container {
 }
 
 .schedule-item.highlight .location {
-    color: rgba(255,255,255,0.9);
+    color: rgba(85, 239, 54, 0.956);
 }
 
 /* Results Section */
@@ -343,6 +343,97 @@ footer {
     color: var(--white);
     text-align: center;
     padding: 2rem;
+}
+
+/* 2026 Tournament Section */
+.tournament-meta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.tournament-badge {
+    background: var(--niu-red);
+    color: var(--white);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.bracket-label {
+    text-align: center;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--niu-black);
+    margin-bottom: 1.2rem;
+    opacity: 0.8;
+}
+
+.bracket-img-wrap {
+    text-align: center;
+}
+
+.bracket-img {
+    width: 60%;
+    max-width: 1100px;
+    border-radius: 15px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.4);
+}
+
+.tournament-badge-link {
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.tournament-badge-link:hover {
+    opacity: 0.8;
+}
+
+/* IFC Follow Section */
+.ifc-follow {
+    background: var(--niu-black);
+    padding: 2.5rem 0;
+}
+
+.ifc-follow-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.ifc-text h3 {
+    color: var(--white);
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+}
+
+.ifc-text p {
+    color: #aaa;
+    max-width: 500px;
+}
+
+.ifc-btn {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+}
+
+.ifc-btn:hover {
+    opacity: 0.85;
 }
 
 /* Responsive Design */
