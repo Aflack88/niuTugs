@@ -453,6 +453,7 @@ footer {
     transition: transform 0.15s, filter 0.15s;
     border: 1px solid rgba(255,255,255,0.18);
     cursor: pointer;
+    touch-action: manipulation;
     -webkit-tap-highlight-color: rgba(255,255,255,0.1);
 }
 
@@ -547,6 +548,7 @@ footer {
     white-space: nowrap;
     transition: opacity 0.2s;
     cursor: pointer;
+    touch-action: manipulation;
     -webkit-tap-highlight-color: rgba(255,255,255,0.1);
 }
 
