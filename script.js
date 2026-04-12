@@ -1,3 +1,11 @@
+// iOS Safari fix for external links on animated/mobile elements
+document.querySelectorAll('.btn-tickets, .ifc-btn').forEach(btn => {
+    btn.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        window.open(this.href, '_blank');
+    });
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
