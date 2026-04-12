@@ -411,6 +411,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .alumni-hero {
+        padding: 3.5rem 1.5rem;
+    }
+
     .alumni-hero .hero-content h2 {
         font-size: 2.2rem;
     }
@@ -427,6 +431,19 @@
     .timeline-year {
         text-align: left;
         font-size: 1.1rem;
+        min-width: auto;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+
+    .photo-submit-cta {
+        padding: 2rem 1.5rem;
+    }
+
+    .reconnect-grid {
+        grid-template-columns: 1fr;
     }
 
     .form-row {
@@ -434,6 +451,51 @@
     }
 
     .alumni-form {
+        padding: 1.5rem;
+    }
+
+    .google-form-wrapper {
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .alumni-hero {
+        padding: 2.5rem 1rem;
+    }
+
+    .alumni-hero .hero-content h2 {
+        font-size: 1.9rem;
+        letter-spacing: 1px;
+    }
+
+    .alumni-hero .tagline {
+        font-size: 1rem;
+    }
+
+    .history-timeline {
+        padding-left: 1.25rem;
+    }
+
+    .timeline-content {
+        padding: 1rem;
+    }
+
+    .photo-submit-cta {
+        padding: 1.5rem 1rem;
+    }
+
+    .photo-submit-icon {
+        font-size: 2.5rem;
+    }
+
+    .submit-btn-link {
+        display: block;
+        text-align: center;
+        padding: 0.85rem 1rem;
+    }
+
+    .reconnect-card {
         padding: 1.5rem;
     }
 }
