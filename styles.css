@@ -69,7 +69,7 @@ header .container {
 .hero {
     background: linear-gradient(135deg, var(--niu-black) 0%, var(--niu-red) 100%);
     color: var(--white);
-    padding: 8rem 2rem;
+    padding: 2.5rem 2rem;
     text-align: center;
 }
 
@@ -355,12 +355,13 @@ footer {
 }
 
 .tournament-badge {
-    background: var(--niu-red);
-    color: var(--white);
+    background: #3a3a3a;
+    color: #e8e8e8;
     padding: 0.4rem 1rem;
     border-radius: 20px;
     font-weight: 600;
     font-size: 0.95rem;
+    border: 1px solid rgba(255,255,255,0.12);
 }
 
 .bracket-label {
@@ -391,6 +392,112 @@ footer {
 
 .tournament-badge-link:hover {
     opacity: 0.8;
+}
+
+.btn-tickets-wrap {
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+
+/* --- Ticket Button v1 (pulse glow) ---
+@keyframes ticket-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(200, 16, 46, 0.5), 0 4px 16px rgba(0,0,0,0.4); }
+    50%       { box-shadow: 0 0 0 8px rgba(200, 16, 46, 0),  0 4px 16px rgba(0,0,0,0.4); }
+}
+.btn-tickets { animation: ticket-pulse 2.2s ease-in-out infinite; }
+.btn-tickets:hover { animation: none; box-shadow: 0 6px 20px rgba(200,16,46,0.55); }
+--- end v1 --- */
+
+/* --- Ticket Button v2 (shimmer sweep + double-ring pulse) --- */
+@keyframes ticket-rings {
+    0%   { box-shadow: 0 0 0 0   rgba(200,16,46,0.6), 0 0 0 0   rgba(200,16,46,0.25), 0 6px 22px rgba(0,0,0,0.45); }
+    60%  { box-shadow: 0 0 0 10px rgba(200,16,46,0),   0 0 0 22px rgba(200,16,46,0),   0 6px 22px rgba(0,0,0,0.45); }
+    100% { box-shadow: 0 0 0 0   rgba(200,16,46,0),   0 0 0 0   rgba(200,16,46,0),   0 6px 22px rgba(0,0,0,0.45); }
+}
+
+/* shimmer v1 ---
+@keyframes ticket-shimmer {
+    0%   { transform: translateX(-120%) skewX(-20deg); }
+    100% { transform: translateX(320%)  skewX(-20deg); }
+}
+.btn-tickets::before {
+    width: 40%;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.22) 50%, transparent 100%);
+    animation: ticket-shimmer 3.5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+--- end shimmer v1 */
+
+/* shimmer v2: double-tap flash */
+@keyframes ticket-shimmer {
+    0%          { transform: translateX(-160%) skewX(-18deg); opacity: 1; }
+    25%         { transform: translateX(280%)  skewX(-18deg); opacity: 1; }
+    25.01%      { transform: translateX(-160%) skewX(-18deg); opacity: 0; }
+    32%         { transform: translateX(-160%) skewX(-18deg); opacity: 1; }
+    57%         { transform: translateX(280%)  skewX(-18deg); opacity: 1; }
+    57.01%, 100%{ transform: translateX(-160%) skewX(-18deg); opacity: 0; }
+}
+
+.btn-tickets {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.1rem;
+    padding: 1rem 2.4rem;
+    background: linear-gradient(135deg, #c8102e 0%, #6e0000 100%);
+    color: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    animation: ticket-rings 2.6s ease-out infinite;
+    transition: transform 0.15s, filter 0.15s;
+    border: 1px solid rgba(255,255,255,0.18);
+}
+
+.btn-tickets::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 35%;
+    height: 120%;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.35) 40%, rgba(255,255,255,0.55) 50%, rgba(255,255,255,0.35) 60%, transparent 100%);
+    animation: ticket-shimmer 4.5s ease-in-out infinite;
+    animation-delay: 1.2s;
+    pointer-events: none;
+}
+
+.btn-tickets:hover {
+    transform: translateY(-2px) scale(1.03);
+    filter: brightness(1.15);
+    animation: none;
+    box-shadow: 0 0 0 14px rgba(200,16,46,0), 0 8px 28px rgba(200,16,46,0.6);
+}
+
+.btn-tickets-icon {
+    font-size: 2.15rem;
+    line-height: 1;
+}
+
+.btn-tickets-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
+}
+
+.btn-tickets-label {
+    font-size: 1.38rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.btn-tickets-sub {
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 0.85;
+    letter-spacing: 0.02em;
 }
 
 /* IFC Follow Section */
