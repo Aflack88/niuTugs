@@ -452,6 +452,8 @@ footer {
     animation: ticket-rings 2.6s ease-out infinite;
     transition: transform 0.15s, filter 0.15s;
     border: 1px solid rgba(255,255,255,0.18);
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(255,255,255,0.1);
 }
 
 .btn-tickets::before {
@@ -465,6 +467,13 @@ footer {
     animation: ticket-shimmer 5.5s ease-in-out infinite;
     animation-delay: 1.2s;
     pointer-events: none;
+    z-index: 0;
+}
+
+.btn-tickets-icon,
+.btn-tickets-text {
+    position: relative;
+    z-index: 1;
 }
 
 .btn-tickets:hover {
@@ -537,6 +546,8 @@ footer {
     text-decoration: none;
     white-space: nowrap;
     transition: opacity 0.2s;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(255,255,255,0.1);
 }
 
 .ifc-btn:hover {
